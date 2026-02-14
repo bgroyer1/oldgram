@@ -1,13 +1,157 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
+}
+
+* {
+  min-width: 0;
+}
+
+:root {
+  /* Font Family */
+  --font-sans: "Source Sans 3", sans-serif;
+
+  /* colours */
+  --color-text: #030303;
+  --color-section-border: RGB(198, 198, 198);
+  --color-white: rgb(255, 255, 255);
+  --color-gray: rgb(79, 91, 102);
+  --color-unknown: #EDEDED;
 }
 
 html {
   box-sizing: border-box;
-
+  height: 100%;
+  scroll-behavior: smooth;
 }
 
 body {
+  min-height: 100%;
+  color: var(--color-text)
+  -webkit-font-smoothing: antialiased;
   margin: 0;
-  font-family: ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font-sans);
+  line-height: 1.5;
+  background-color: var(--color-gray);
+  text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  list-style-type: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+input,
+textarea,
+select,
+button {
+  font: inherit;
+}
+
+button {
+  background-color: var(--color-white);
+  border: none;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  max-width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* layout */
+
+.width-wrapper {
+  width: 375px;
+  background-color: var(--color-unknown);
+}
+
+header {
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  border-bottom: var(--color-section-border) 1px solid;
+}
+
+main,
+header,
+footer {
+  background-color: var(--color-white);
+}
+
+.header-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.name-div {
+
+}
+
+.name {
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.location {
+  font-size: 13px;
+  margin-top: 0;
+}
+
+.post {
+  margin-bottom: 25px;
+}
+
+/* images */
+
+.logo {
+  width: 127px;
+  margin-left: 15px;
+  padding: 16px 0;
+}
+
+i {
+  background-color: var(--color-white);
+  border: none;
+}
+
+.profile-pic {
+  width: 34px;
+  border-radius: 50%;
+  margin-right: 17px;
+}
+
+.avatar {
+  width: 34px;
+  border-radius: 50%;
 }

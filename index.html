@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,19 +16,42 @@
       href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
       rel="stylesheet"
     />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <!-- Favicon -->
-     
+    <link rel="icon" href="./images/favicon_io/favicon.ico" />
     <!-- Title -->
     <title>Scrimba Oldgram</title>
     <!-- Script -->
     <script src="./js/script.js" type="module" defer></script>
   </head>
   <body>
-    <header>
-      <div class="wrapper"></div>
-    </header>
-    <main>
-      <div class="wrapper"></div>
-    </main>
+    <div class="width-wrapper">
+      <header>
+        <div class="header-div wrapper">
+          <img
+            class="logo"
+            src="./images/logo.png"
+            alt="A simple logo reading 'Oldgram'"
+          />
+          <img
+            class="profile-pic"
+            src="./images/user-avatar.png"
+            alt="Per Borgen, Scrimba Founder, smiling in a ball cap"
+          />
+        </div>
+      </header>
+      <main>
+        <div class="wrapper">
+          <section class="content-feed"></section>
+        </div>
+      </main>
+    </div>
   </body>
 </html>
