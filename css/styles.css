@@ -17,7 +17,10 @@
   --color-section-border: RGB(198, 198, 198);
   --color-white: rgb(255, 255, 255);
   --color-gray: rgb(79, 91, 102);
-  --color-unknown: #EDEDED;
+  --bg-section: #ededed;
+  --post-action-like: #ef4444;
+  --post-action-share: #3b82f6;
+  --post-action-comment: #22c55e;
 }
 
 html {
@@ -28,7 +31,7 @@ html {
 
 body {
   min-height: 100%;
-  color: var(--color-text)
+  color: var(--color-text);
   -webkit-font-smoothing: antialiased;
   margin: 0;
   display: flex;
@@ -84,12 +87,16 @@ svg {
 
 /* layout */
 
-.width-wrapper {
-  width: 375px;
-  background-color: var(--color-unknown);
+.content-feed {
+  background-color: var(--bg-section);
 }
 
-header {
+.width-wrapper {
+  width: 375px;
+  background-color: var(--bg-section);
+}
+
+.header {
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
   border-bottom: var(--color-section-border) 1px solid;
@@ -113,8 +120,16 @@ footer {
   gap: 7px;
 }
 
-.name-div {
+.post-header {
+  margin: 0 10px;
+}
 
+.message-div {
+  margin: 11px 10px 25px;
+}
+
+.post-header:first-of-type {
+  margin-top: 0;
 }
 
 .name {
@@ -129,7 +144,72 @@ footer {
 }
 
 .post {
-  margin-bottom: 25px;
+  border-radius: 5px;
+  background-color: var(--color-white);
+}
+
+.post-actions {
+  display: flex;
+  margin: 10px 0 0 10px;
+  justify-content: start;
+  padding: 0;
+  flex-direction: column;
+}
+
+.post-actions-button-div {
+  display: flex;
+  gap: 10px;
+  padding: 0;
+  margin-left: -4px;
+  border: none;
+  justify-content: start;
+}
+
+button {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+button i {
+  margin: 0;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 24px;
+}
+
+.liked {
+  color: var(--post-action-like);
+}
+
+.shared {
+  color: var(--post-action-share);
+}
+
+.commented {
+  color: var(--post-action-comment);
+}
+
+.like-count {
+  padding: 0;
+  font-weight: bold;
+  font-size: 13px;
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+
+.message-div {
+  padding-bottom: 5px;
+  margin-top: 0;
+}
+
+.username,
+.comment {
+  font-size: 13px;
+}
+
+.username {
+  font-weight: 700;
 }
 
 /* images */
@@ -137,12 +217,7 @@ footer {
 .logo {
   width: 127px;
   margin-left: 15px;
-  padding: 16px 0;
-}
-
-i {
-  background-color: var(--color-white);
-  border: none;
+  padding: 4px 0;
 }
 
 .profile-pic {
